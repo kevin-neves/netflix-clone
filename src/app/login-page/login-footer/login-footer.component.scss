@@ -1,0 +1,22 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: black;
+    padding-left: 128px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #6F6F6F;
+    font-family: 'martel';
+}
+
+.sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.sections p {
+    margin-right: 70px;
+}

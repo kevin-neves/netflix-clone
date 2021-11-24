@@ -1,0 +1,78 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 900px;
+    background-image: url("/assets/netflix_background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: grayscale(80%);
+}
+
+.logo {
+    display: flex;
+    width: 165px;
+    height: 93px;
+    margin-left: 80px;
+    margin-top: 30px;
+    align-self: flex-start;
+}
+
+.login-modal {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    height: 600px;
+    padding: 60px;
+    background: black;
+    align-self: center;
+}
+
+.login-modal h3 {
+    color: white;
+    font-size: 32px;
+    font-family: 'martel';
+    font-weight: 800;
+}
+
+.login-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-modal input {
+    height: 35px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #333333;
+    color: white;
+    border: none;
+}
+
+.login-modal button {
+    height: 50px;
+    margin-top: 21px;
+    background-color: #E50914;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+.login-modal p {
+    color: #8C8C8C;
+    margin-top: 50px;
+    font-size: 12px;
+}
+
+.login-modal span {
+    color: #0080FF;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.error {
+    color: #F28300;
+}
+
+
+
