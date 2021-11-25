@@ -1,0 +1,6 @@
+<div class="user-main-container">
+    <div class="user-profile-div" *ngFor="let item of data?.['users']">
+        <img src={{item.avatarUrl}} class="user-profile-pic">
+        <h5 class="user-profile-name">{{item.name}}</h5>
+    </div>
+</div>

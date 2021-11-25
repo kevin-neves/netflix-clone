@@ -8,13 +8,17 @@ import { LoginMainComponent } from './login-page/login-main/login-main.component
 import { ModalComponent } from './moviesPage/modal/modal.component';
 import { HttpClientModule } from '@angular/common/http'
 import { LoginFooterComponent } from './login-page/login-footer/login-footer.component';
+import { UserMainComponent } from './user-page/user-main/user-main.component';
+import { UserProfileComponent } from './user-page/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalComponent,
     LoginMainComponent,
-    LoginFooterComponent
+    LoginFooterComponent,
+    UserMainComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
