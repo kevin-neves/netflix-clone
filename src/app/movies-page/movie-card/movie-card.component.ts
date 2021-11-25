@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AppService } from 'src/app/app.service';
+import { AppService, MovieInterface } from 'src/app/app.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -22,7 +22,7 @@ export class MovieCardComponent implements OnInit {
   }
 
   getInfo(id: number) {
-    this.appService.getMovieInfo(id).subscribe((resp: any) => {
+    this.appService.getMovieInfo(id).subscribe((resp: MovieInterface) => {
       this.image = resp.cardImage
       this.loading = false;
     })

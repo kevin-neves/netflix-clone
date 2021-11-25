@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService, MoviesListId, UserInterface } from '../app.service';
+import { AppService, MovieInterface, MoviesListId } from '../app.service';
+import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-movies-page',
@@ -9,16 +10,34 @@ import { AppService, MoviesListId, UserInterface } from '../app.service';
 export class MoviesPageComponent implements OnInit {
   popularId: number[] = []
   keepWatchingId: number[] = []
-  headerInfo: any = [];
+  id: number = 1
+
+  headerBackground: string = ''
+  headerTitle: string = ''
+  headerDescription: string = ''
+
   loading: boolean = false
+
+  userId: number = 0
+  hidden: boolean = true
+
+  // Change apperance of navbar on scroll
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    let element = document.querySelector('header') as HTMLElement;    
+    if (window.pageYOffset > element.clientHeight) {
+      element.classList.add('header-change');
+    } else {
+      element.classList.remove('header-change');
+    }
+  }
 
   constructor(private appService: AppService) { }
 
   ngOnInit() {
     this.loading = true;
-    this.login()
     this.loadPage(1)
-    this.createHeader()
+    this.createHeader(1)
   }
 
   loadPage(userId: number) {
@@ -26,21 +45,24 @@ export class MoviesPageComponent implements OnInit {
       const { popular, keepWatching } = resp;
       this.popularId = popular;
       this.keepWatchingId = keepWatching;
-      console.log(this.popularId) 
     })
   }
 
-  createHeader() {
-    this.appService.getMovieInfo(1).subscribe((resp: any) => {
-      this.headerInfo = resp;
+  createHeader(id: number) {
+    this.appService.getMovieInfo(id).subscribe((resp: MovieInterface) => {
+      this.headerBackground = resp.backgroundImage;
+      this.headerTitle = resp.titleImage;
+      this.headerDescription = resp.description;
       this.loading = false;
     })
   }
 
-  login() {
-    this.appService.login('kjneves', '*****').subscribe((resp: UserInterface)=> {
-      console.log(resp)
-    })
+  showModal(id: number) {
+    this.id = id;
+    this.hidden = false
   }
 
+  hideModal() {
+    this.hidden = true
+  }
 }

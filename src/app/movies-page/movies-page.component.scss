@@ -4,6 +4,7 @@
     text-decoration: none;
     font-size: 16px;
     color: #fff;
+    
 }
 
 body {
@@ -45,11 +46,16 @@ header {
     position: fixed;
     width: 100vw;
     height: 6vh;
-    padding-top: 1.5rem;
+    padding: 0.5rem 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient(0deg, rgba(20,20,20,0) 0%, rgba(0,0,0,0.70) 100%);
+    background: linear-gradient(0deg, rgba(20,20,20,0) 0%, rgba(0,0,0,0.50) 80%, rgba(0,0,0,0.70) 100%);
+    z-index: 10;
+}
+
+.header-change {
+    background: rgba(0,0,0,0.95);
 }
 
 header div {
@@ -79,19 +85,23 @@ li:first-child p {
 }
 
 .search-icon {
-    height: 2rem;
     padding: 0 2rem;
 }
 
 .bell-icon {
     filter: invert(100%) sepia(35%) saturate(1501%) hue-rotate(251deg) brightness(128%) contrast(108%);
+}
+
+.search-icon, .bell-icon {
     height: 2rem;
 }
 
-.user-icon {
-    height: 5vh;
-    border-radius: 1vh;
-    margin: 0 2rem; 
+.search-icon:hover, .bell-icon:hover {
+    cursor: pointer;
+}
+
+.right-menu {
+    padding-right: 2rem;
 }
 
 section {
@@ -114,11 +124,11 @@ section {
 }
 
 .preview-logo-img {
-    width: 45vw;
+    width: 50vw;
 }
 
 .preview-text {
-    width: 45vw;
+    width: 50vw;
     text-align: justify;
     padding: 1rem 0;
     line-height: 1.2rem;
@@ -127,10 +137,11 @@ section {
 
 .preview-text p {
     font-size: 1.25rem;
+    line-height: 2rem;
 }
 
 .preview-btn {
-    width: 55vw;
+    width: 60vw;
     display: flex;
     gap: 2rem;
     justify-content:flex-start;
@@ -141,31 +152,14 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 0.3rem 1.25rem;
+    padding: 0 1.25rem;
+    padding-top: 0.5rem;
     border-radius: 10px;
 }
 
 .preview-btn p {
     padding-bottom: 0.25rem;
     font-size: 1rem;
-}
-
-.btn-play {
-    background-color: #fff;
-}
-
-.btn-play:hover {
-    background-color: rgb(255, 255, 255, 0.7);
-}
-
-.btn-play img {
-    height: 1.5rem;
-    padding-right: 0.5rem;
-}
-
-.btn-play p {
-    padding-right: 1rem;
-    color: #141414;
 }
 
 .btn-more {
@@ -186,11 +180,13 @@ section {
 }
 
 .row {
+    height: fit-content;
     padding-left: 2rem;
     margin-bottom: 4rem;
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
     flex-wrap: nowrap;
 }
 
@@ -213,27 +209,85 @@ section {
     width: 100%;
     height: 7.5rem;
     height: fit-content;
-    overflow: hidden;
+    overflow-x: scroll;
 }
 
 .row ul {
-    height: auto;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
 }
 
+.row li {
+    position: relative;
+}
+
+
+@media screen and (max-width: 1080px) {
+    ul p {
+        font-size: 1rem;
+    }
+
+    .search-icon, .bell-icon {
+        height: 1.5rem;
+    }
+    
+    
+    .preview-info {
+        padding-top: 7.5vw;
+    }
+    .preview-text p {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
 
 @media screen and (max-width: 769px) {
+    header {
+        position: fixed;
+        padding-top: 0.5rem;
+    }
+    
+    .logo {
+        height: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .menu-options {
+        display: none;
+    }
+
+    .search-icon, .bell-icon {
+        display: none;
+    }
+
     section:first-child {
         display: none;
     }
 
     section {
-        padding-top: 2rem;
+        padding-top: 5rem;
+    }
+
+    .row {
+        padding-left: 1rem;
     }
 
     .row-title-container {
-        position: block;
+        padding-bottom: 0;
+        top: 0;
+        left: 0;
+        position:relative;
+    }
+
+    .row-title {
+        padding-left: 0;
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .row ul {
+        gap: 0.25rem;
     }
 }

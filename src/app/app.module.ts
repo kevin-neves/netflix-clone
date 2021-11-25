@@ -6,6 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesPageComponent } from './movies-page/movies-page.component';
 import { MovieCardComponent } from './movies-page/movie-card/movie-card.component';
+import { ModalComponent } from './movies-page/modal/modal.component';
+import { BtnPlayComponent } from './movies-page/btn-play/btn-play.component';
 
 
 @NgModule({
@@ -13,6 +15,8 @@ import { MovieCardComponent } from './movies-page/movie-card/movie-card.componen
     AppComponent,
     MoviesPageComponent,
     MovieCardComponent,
+    ModalComponent,
+    BtnPlayComponent,
   ],
   imports: [
     BrowserModule,
