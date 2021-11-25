@@ -29,3 +29,28 @@ h5 {
     font-family: 'martel';
 }
 
+@media screen and (max-width: 769px) {
+
+    .user-profile-div {
+        display: flex;
+        width: 80px;
+        height: 100px;
+        margin-right: 8px;
+        flex-direction: column;
+        border-radius: 5px;
+        
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    h5 {
+        color: #808080;
+        align-self: center;
+        font-family: 'martel';
+    }
+
+}
+

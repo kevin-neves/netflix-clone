@@ -12,11 +12,37 @@
 
 .sections {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     width: 70%;
 }
 
 .sections p {
-    margin-right: 70px;
+    margin-right: 60px;
+}
+
+
+@media screen and (max-width: 769px) {
+
+    .footer {
+        display: relative;
+        flex-direction: column;
+        background: black;
+        padding: 16px;
+        color: #6F6F6F;
+        font-family: 'martel';
+    }
+
+    .sections {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+       
+    }
+
+    .sections p {
+        font-size: 10px; 
+
+    }
+    
 }
