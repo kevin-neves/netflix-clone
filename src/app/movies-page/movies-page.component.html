@@ -1,0 +1,80 @@
+<div *ngIf="loading; else movies">
+    <h1 [ngStyle]="{'color': 'black'}">LOADING...</h1>
+</div>
+<ng-template #movies>
+    <header (scroll)="onWindowScroll()">
+        <div class="left-menu">
+            <div class="logo-container">
+                <img src="assets/logo.png" alt="Netflix Logo" class="logo">
+            </div>
+            <nav class="menu">
+                <div class="menu-options">
+                    <ul class="menu-options">
+                        <li><a><p>Início</p></a></li>
+                        <li><a><p>Séries</p></a></li>
+                        <li><a><p>Filmes</p></a></li>
+                        <li><a><p>Bombando</p></a></li>
+                        <li><a><p>Minha lista</p></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="right-menu">
+            <div class="search">
+                <img src="assets/icons/search-icon.png" alt="search icon" class="search-icon">
+            </div>
+            <div class="notifications">
+                <img src="assets/icons/bell-icon.svg" alt="Bell Icon" class="bell-icon"> 
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="preview" [ngStyle]="{'background-image': 'url(' + headerBackground + ')'}">
+            <div class="preview-background"  ></div>
+            <div class="preview-info">                
+                <div class="preview-logo">
+                    <img src={{headerTitle}} alt="" class="preview-logo-img">
+                </div>
+                <div class="preview-text">
+                    <p>{{headerDescription}}</p>
+                </div>
+                <div class="preview-btn">
+                    <app-btn-play></app-btn-play>
+                    <button type="button" class="btn-more">
+                        <div class="play">
+                            <img src="assets/icons/info-icon.png" alt="info icon">
+                        </div>
+                        <p>Mais informações</p>
+                    </button>
+                </div>                
+            </div>
+        </section>
+        <section class="catalog">
+            <div class="row">
+                <div class="row-title-container">
+                    <h1 class="row-title">Populares na Netflix</h1>
+                </div>
+                <div class="movies-container">
+                    <ul>
+                        <li *ngFor="let id of popularId">
+                            <app-movie-card [id]="id" (click)="showModal(id)" ></app-movie-card>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row-title-container">
+                    <h1 class="row-title">Continuar assistindo como usuário {{userId}}</h1>
+                </div>
+                <div class="movies-container">
+                    <ul>
+                        <li *ngFor="let id of keepWatchingId">
+                            <app-movie-card [id]="id" (click)="showModal(id)" ></app-movie-card>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <app-modal [id]="id" *ngIf="!hidden" (hiddenModal)="hideModal()"></app-modal>
+</ng-template>

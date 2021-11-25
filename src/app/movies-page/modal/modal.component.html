@@ -1,0 +1,40 @@
+<div class="modal-container" (click)="closeModal()">
+  <div class="modal" *ngIf="!loading" (click)="cancelBubbling($event)">
+    <div
+      class="image-container"
+      [ngStyle]="{ 'background-image': 'url(' + backgroundImage + ')' }"
+    >
+      <div class="btn-close-container">
+        <button type="button" class="btn-close" (click)="closeModal()">
+          X
+        </button>
+      </div>
+      <div class="btn-play-container">
+          <div class="title-container">
+              <img src={{title}} alt="title image">
+          </div>
+        <app-btn-play></app-btn-play>
+      </div>
+    </div>
+    <div class="info-container">
+      <div class="main-info">
+        <div class="header-info">
+          <p class="relevance">{{ relevance }}% relevante</p>
+          <p>{{ year }}</p>
+          <div class="classification">
+              <p>{{ classification }}</p>
+          </div>
+          <p>{{time || "Season " + season}}</p>
+        </div>
+        <div class="info-plot">
+          <p>{{ description }}</p>
+        </div>
+      </div>
+      <div class="cast-info">
+        <p><span class="cast-type">Elenco: </span>{{ cast }}</p>
+        <p><span class="cast-type">Gêneros: </span>{{ genre }}</p>
+        <p><span class="cast-type">Cenas e momentos: </span>{{ scenes }}</p>
+      </div>
+    </div>
+  </div>
+</div>
