@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+header, main {
+    background-color: #141414;  
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 6vh;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(0deg, rgba(20,20,20,0) 0%, rgba(0,0,0,0.50) 80%, rgba(0,0,0,0.70) 100%);
+    z-index: 10;
+}
+
+.header-change {
+    background: rgba(0,0,0,0.95);
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul p {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.6);
+}
+
+li:first-child p {
+    color: white;
+}
+
+.logo {
+    height: 2rem;
+    padding: 0 2rem;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.search-icon {
+    padding: 0 2rem;
+}
+
+.bell-icon {
+    filter: invert(100%) sepia(35%) saturate(1501%) hue-rotate(251deg) brightness(128%) contrast(108%);
+}
+
+.search-icon, .bell-icon {
+    height: 2rem;
+}
+
+.search-icon:hover, .bell-icon:hover {
+    cursor: pointer;
+}
+
+.right-menu {
+    padding-right: 2rem;
+}
+
+section {
+    width: 100%;
+}
+
+.preview {
+    background-size: cover;
+    height: 56.25vw;
+}
+
+.preview-info {
+    height: 30vw;
+    padding-top: 9vw;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
+.preview-logo-img {
+    width: 50vw;
+}
+
+.preview-text {
+    width: 50vw;
+    text-align: justify;
+    padding: 1rem 0;
+    line-height: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+}
+
+.preview-text p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.preview-btn {
+    width: 60vw;
+    display: flex;
+    gap: 2rem;
+    justify-content:flex-start;
+    font-weight: bold;
+}
+
+.preview-btn button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1.25rem;
+    padding-top: 0.5rem;
+    border-radius: 10px;
+}
+
+.preview-btn p {
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.btn-more {
+    background-color: rgba(180, 180, 180, 0.7);
+}
+
+.btn-more:hover {
+    background-color: rgba(110, 110, 110, 0.95);
+}
+
+.btn-more img {
+    height: 1rem;
+    padding-right: 1rem;
+}
+
+.catalog {
+    min-height: 100vh;
+}
+
+.row {
+    height: fit-content;
+    padding-left: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.row-title-container {
+    // background: linear-gradient(0deg, rgba(20,20,20, 1) 0%, rgba(20,20,20,0.8) 20%, rgba(20,20,20,0.4) 50%, rgba(20,20,20,0.05) 100%);
+    position: absolute;
+    width: 100vw;
+    padding-bottom: 2rem;
+    top: -4rem;
+    left: -2rem;
+    right: 0;
+}
+
+.row-title {
+    padding-left: 4rem;
+    font-size: 1.8rem;
+}
+
+.movies-container {
+    width: 100%;
+    height: 7.5rem;
+    height: fit-content;
+    overflow-x: scroll;
+}
+
+.row ul {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.row li {
+    position: relative;
+}
+
+
+@media screen and (max-width: 1080px) {
+    ul p {
+        font-size: 1rem;
+    }
+
+    .search-icon, .bell-icon {
+        height: 1.5rem;
+    }
+    
+    
+    .preview-info {
+        padding-top: 7.5vw;
+    }
+    .preview-text p {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    header {
+        position: fixed;
+        padding-top: 0.5rem;
+    }
+    
+    .logo {
+        height: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .menu-options {
+        display: none;
+    }
+
+    .search-icon, .bell-icon {
+        display: none;
+    }
+
+    section:first-child {
+        display: none;
+    }
+
+    section {
+        padding-top: 5rem;
+    }
+
+    .row {
+        padding-left: 1rem;
+    }
+
+    .row-title-container {
+        padding-bottom: 0;
+        top: 0;
+        left: 0;
+        position:relative;
+    }
+
+    .row-title {
+        padding-left: 0;
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .row ul {
+        gap: 0.25rem;
+    }
+}

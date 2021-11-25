@@ -1,0 +1,6 @@
+<div *ngIf="loading; else card"></div>
+<ng-template #card>
+    <div class="img-container" *ngIf="!loading">
+        <img src={{image}} alt="">
+    </div>
+</ng-template>

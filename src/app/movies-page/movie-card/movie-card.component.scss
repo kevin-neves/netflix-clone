@@ -1,0 +1,9 @@
+.img-container:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 769px) {
+    .img-container img{
+        height: 6.5rem;
+    }
+}
