@@ -46,7 +46,11 @@
     padding: 15px;
     background-color: #333333;
     color: white;
-    border: none;
+    border: black;
+}
+
+.login-modal .ng-touched .ng-invalid{
+    border-bottom: #F28300 2px solid;
 }
 
 .login-modal button {
@@ -56,6 +60,7 @@
     border: none;
     border-radius: 10px;
     color: white;
+    cursor: pointer;
 }
 
 .login-modal p {

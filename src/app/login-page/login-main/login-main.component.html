@@ -6,7 +6,7 @@
     <div class="login-modal">
         <h3>Entrar</h3>
             <form [formGroup]="loginForm">
-                <input type="text" placeholder="Email ou numero de telefone" formControlName="login">
+                <input type="text" placeholder="Email ou numero de telefone" formControlName="login" class="user-input">
                 <small class="error" *ngIf="loginForm.controls['login'].invalid 
                 && (loginForm.controls['login'].dirty || loginForm.controls['login'].touched)">
                 Informe um e-mail ou número de telefone válido</small>
