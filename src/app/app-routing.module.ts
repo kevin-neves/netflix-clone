@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MoviesPageComponent } from './movies-page/movies-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: 'movies', component: MoviesPageComponent}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+header, main {
+    background-color: #141414;  
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    height: 6vh;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient(0deg, rgba(20,20,20,0) 0%, rgba(0,0,0,0.70) 100%);
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+ul p {
+    font-size: 1.25rem;
+    color: rgba(255,255,255,0.6);
+}
+
+li:first-child p {
+    color: white;
+}
+
+.logo {
+    height: 2rem;
+    padding: 0 2rem;
+}
+
+.menu-options {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.search-icon {
+    height: 2rem;
+    padding: 0 2rem;
+}
+
+.bell-icon {
+    filter: invert(100%) sepia(35%) saturate(1501%) hue-rotate(251deg) brightness(128%) contrast(108%);
+    height: 2rem;
+}
+
+.user-icon {
+    height: 5vh;
+    border-radius: 1vh;
+    margin: 0 2rem; 
+}
+
+section {
+    width: 100%;
+}
+
+.preview {
+    background-size: cover;
+    height: 56.25vw;
+}
+
+.preview-info {
+    height: 30vw;
+    padding-top: 9vw;
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 2rem;
+}
+
+.preview-logo-img {
+    width: 45vw;
+}
+
+.preview-text {
+    width: 45vw;
+    text-align: justify;
+    padding: 1rem 0;
+    line-height: 1.2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.9);
+}
+
+.preview-text p {
+    font-size: 1.25rem;
+}
+
+.preview-btn {
+    width: 55vw;
+    display: flex;
+    gap: 2rem;
+    justify-content:flex-start;
+    font-weight: bold;
+}
+
+.preview-btn button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.3rem 1.25rem;
+    border-radius: 10px;
+}
+
+.preview-btn p {
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+}
+
+.btn-play {
+    background-color: #fff;
+}
+
+.btn-play:hover {
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+.btn-play img {
+    height: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+.btn-play p {
+    padding-right: 1rem;
+    color: #141414;
+}
+
+.btn-more {
+    background-color: rgba(180, 180, 180, 0.7);
+}
+
+.btn-more:hover {
+    background-color: rgba(110, 110, 110, 0.95);
+}
+
+.btn-more img {
+    height: 1rem;
+    padding-right: 1rem;
+}
+
+.catalog {
+    min-height: 100vh;
+}
+
+.row {
+    padding-left: 2rem;
+    margin-bottom: 4rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.row-title-container {
+    // background: linear-gradient(0deg, rgba(20,20,20, 1) 0%, rgba(20,20,20,0.8) 20%, rgba(20,20,20,0.4) 50%, rgba(20,20,20,0.05) 100%);
+    position: absolute;
+    width: 100vw;
+    padding-bottom: 2rem;
+    top: -4rem;
+    left: -2rem;
+    right: 0;
+}
+
+.row-title {
+    padding-left: 4rem;
+    font-size: 1.8rem;
+}
+
+.movies-container {
+    width: 100%;
+    height: 7.5rem;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.row ul {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+
+@media screen and (max-width: 769px) {
+    section:first-child {
+        display: none;
+    }
+
+    section {
+        padding-top: 2rem;
+    }
+
+    .row-title-container {
+        position: block;
+    }
+}
