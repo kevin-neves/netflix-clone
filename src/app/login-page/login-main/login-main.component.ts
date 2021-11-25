@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { EmailValidator, FormBuilder, Validators } from '@angular/forms';
 import { AppService, UserInterface } from 'src/app/app.service';
 import { Router } from '@angular/router';
 

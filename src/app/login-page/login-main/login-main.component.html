@@ -8,11 +8,11 @@
             <form [formGroup]="loginForm">
                 <input type="text" placeholder="Email ou numero de telefone" formControlName="login">
                 <small class="error" *ngIf="loginForm.controls['login'].invalid 
-                && (loginForm.controls['login'].dirty || loginForm.controls['login'].touched)">
+                && (loginForm.controls['login'].touched)">
                 Informe um e-mail ou número de telefone válido</small>
                 <input type="password" placeholder="Senha"  formControlName="password">
                 <small class="error" *ngIf="loginForm.controls['password'].invalid 
-                && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
+                && (loginForm.controls['password'].touched)">
                 A senha deve ter entre 4 e 60 caracteres</small>
             </form>
         <button [disabled]="loginForm.invalid" (click)="login()">Entrar</button>
