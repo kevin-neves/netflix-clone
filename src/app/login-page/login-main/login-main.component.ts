@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmailValidator, FormBuilder, Validators } from '@angular/forms';
 import { AppService, UserInterface } from 'src/app/app.service';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-login-main',
@@ -17,9 +18,11 @@ export class LoginMainComponent implements OnInit {
     password: ["", [Validators.required, Validators.minLength(6), Validators.maxLength(70)]]
   }) 
  
-  constructor(private fb: FormBuilder, private appService: AppService, private router: Router) {}
+  constructor(private fb: FormBuilder, private appService: AppService, private router: Router, private authService: AuthService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isAlreadyLogged()
+  }
 
   showKnowMore() {
     if (this.knowMore === true) this.knowMore = false
@@ -37,6 +40,12 @@ export class LoginMainComponent implements OnInit {
         this.router.navigateByUrl("users", { state: data})
       }
     })
+  }
+
+  isAlreadyLogged() {
+    if (localStorage.getItem('token') != null) {
+      this.router.navigate(['movies', 1]);
+    }
   }
 }
 

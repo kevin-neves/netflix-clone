@@ -7,8 +7,8 @@ import { UserMainComponent } from './user-page/user-main/user-main.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginMainComponent},
-  {path: 'users', component: UserMainComponent},
-  {path: 'movies', component: MoviesPageComponent, canActivate: [AuthGuard]}
+  {path: 'users', component: UserMainComponent, canActivate: [AuthGuard]}, 
+  {path: 'movies/:id', component: MoviesPageComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

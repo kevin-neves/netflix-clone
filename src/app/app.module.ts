@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginMainComponent } from './login-page/login-main/login-main.component';
-import { ModalComponent } from './moviesPage/modal/modal.component';
+import { ModalComponent } from './movies-page/modal/modal.component'
 import { HttpClientModule } from '@angular/common/http'
 import { LoginFooterComponent } from './login-page/login-footer/login-footer.component';
 import { UserMainComponent } from './user-page/user-main/user-main.component';
@@ -25,7 +24,6 @@ import { BtnPlayComponent } from './movies-page/btn-play/btn-play.component';
     UserProfileComponent,
     MoviesPageComponent,
     MovieCardComponent,
-    ModalComponent,
     BtnPlayComponent,
   ],
   imports: [

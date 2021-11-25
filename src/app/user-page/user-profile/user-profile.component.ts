@@ -17,9 +17,9 @@ export class UserProfileComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // navigateMeTo(id: number) {
-  //   this.router.navigate([url, id.toString])
-  // }
+  navigateMeTo(id: number) {
+    this.router.navigate(['movies', id])
+  }
 
  
 }
