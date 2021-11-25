@@ -1,0 +1,48 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: black;
+    padding-left: 128px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #6F6F6F;
+    font-family: 'martel';
+}
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+.sections p {
+    margin-right: 60px;
+}
+
+
+@media screen and (max-width: 769px) {
+
+    .footer {
+        display: relative;
+        flex-direction: column;
+        background: black;
+        padding: 16px;
+        color: #6F6F6F;
+        font-family: 'martel';
+    }
+
+    .sections {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+       
+    }
+
+    .sections p {
+        font-size: 10px; 
+
+    }
+    
+}

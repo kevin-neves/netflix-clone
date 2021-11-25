@@ -60,3 +60,4 @@ export class AppService {
         return this.http.post<UserInterface>(this.loginUrl, {email, senha})
     }
 } 
+

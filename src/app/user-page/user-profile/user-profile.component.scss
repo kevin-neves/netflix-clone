@@ -1,0 +1,56 @@
+.user-main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.user-profile-div {
+    display: flex;
+    width: 145px;
+    height: 250px;
+    margin-right: 70px;
+    flex-direction: column;
+    border-radius: 5px;
+    
+}
+
+.user-profile-div :hover {
+    border: 3px white solid   
+}
+
+img {
+    width: 145px;
+    height: 145px;
+}
+
+h5 {
+    color: #808080;
+    align-self: center;
+    font-family: 'martel';
+}
+
+@media screen and (max-width: 769px) {
+
+    .user-profile-div {
+        display: flex;
+        width: 80px;
+        height: 100px;
+        margin-right: 8px;
+        flex-direction: column;
+        border-radius: 5px;
+        
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    h5 {
+        color: #808080;
+        align-self: center;
+        font-family: 'martel';
+    }
+
+}
+
