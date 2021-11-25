@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-
 export interface UserInterface {
   "token": string,
   "users": [{
@@ -27,11 +26,6 @@ export class AppService {
 
   constructor(private http: HttpClient) { }
   endPoint: string = 'https://private-3923c4-santandercoders809.apiary-mock.com/'
-
-  // login(email: string, password: string): Observable<UserInterface> {
-  //   return this.http.post<UserInterface>(this.endPoint + 'login', {email,password},
-  //    {responseType: 'json'}) as unknown as Observable<UserInterface>
-  // }
 
   login(email: string, senha: string): Observable<UserInterface> {
     this.loginUrl = 'https://private-3923c4-santandercoders809.apiary-mock.com/login'
