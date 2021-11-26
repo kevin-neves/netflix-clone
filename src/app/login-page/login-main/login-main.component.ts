@@ -14,7 +14,7 @@ export class LoginMainComponent implements OnInit {
   loading: boolean = false
   knowMore = false
   loginForm = this.fb.group({
-    login: ["",  Validators.compose([Validators.required, Validators.email])] ,
+    login: ["",  Validators.compose([Validators.required, Validators.email])],
     password: ["", [Validators.required, Validators.minLength(6), Validators.maxLength(70)]]
   }) 
  
@@ -48,4 +48,3 @@ export class LoginMainComponent implements OnInit {
     }
   }
 }
-
