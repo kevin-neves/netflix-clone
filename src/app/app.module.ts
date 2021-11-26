@@ -12,6 +12,7 @@ import { UserProfileComponent } from './user-page/user-profile/user-profile.comp
 import { MoviesPageComponent } from './movies-page/movies-page.component';
 import { MovieCardComponent } from './movies-page/movie-card/movie-card.component';
 import { BtnPlayComponent } from './movies-page/btn-play/btn-play.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { BtnPlayComponent } from './movies-page/btn-play/btn-play.component';
     MoviesPageComponent,
     MovieCardComponent,
     BtnPlayComponent,
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
