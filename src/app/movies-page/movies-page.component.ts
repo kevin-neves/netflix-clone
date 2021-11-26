@@ -33,7 +33,7 @@ export class MoviesPageComponent implements OnInit {
     }
   }
 
-  constructor(private appService: AppService, private route: ActivatedRoute) { }
+  constructor(private appService: AppService, private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.loading = true;
