@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { EmailValidator, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { AppService, UserInterface } from 'src/app/app.service';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -12,7 +12,8 @@ import { AuthService } from 'src/app/auth/auth.service';
 export class LoginMainComponent implements OnInit {
 
   loading: boolean = false
-  knowMore = false
+  knowMore: boolean = false
+
   loginForm = this.fb.group({
     login: ["",  Validators.compose([Validators.required, Validators.email])],
     password: ["", [Validators.required, Validators.minLength(6), Validators.maxLength(70)]]

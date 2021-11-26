@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService, MovieInterface, MoviesListId } from '../app.service';
 import { HostListener } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movies-page',
@@ -38,10 +38,8 @@ export class MoviesPageComponent implements OnInit {
   ngOnInit() {
     this.loading = true;
     this.userId = this.route.snapshot.params["id"]
-    console.log(this.userId)
     this.loadPage(this.userId)
-    this.createHeader(1)
-
+    this.createHeader(this.userId)
   }
 
   loadPage(userId: number) {
