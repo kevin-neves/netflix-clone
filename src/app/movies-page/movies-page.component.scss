@@ -166,7 +166,7 @@ section {
 
 .preview-text p {
     font-size: 1.25rem;
-    line-height: 2rem;
+    line-height: 1.75rem;
 }
 
 .preview-btn {
@@ -205,11 +205,13 @@ section {
 }
 
 .catalog {
-    min-height: 100vh;
+    min-height: fit-content;
     position: relative;
+    padding-bottom: 5rem;
 }
 
 .row {
+    width: calc(100vw - 4rem);
     padding-top: 16rem ;
     height: fit-content;
     padding-left: 2rem;
@@ -222,7 +224,6 @@ section {
 }
 
 .row:first-child {
-    width: 100vw;
     padding-top: 0;
     top: -4.5rem;
     position: absolute;
@@ -313,6 +314,7 @@ section {
 
     .preview-text{
         width: 65vw;
+        padding: 0.8rem 0;
     }
 
     .preview-text p {
@@ -350,9 +352,11 @@ section {
 
     section {
         padding-top: 5rem;
+        height: 100vh;
     }
 
     .row {
+        width: calc(100vw - 2rem);
         padding: 0;
         padding-left: 1rem;
         margin: 0;
