@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class MoviesPageComponent implements OnInit {
   popularId: number[] = []
   keepWatchingId: number[] = []
-  id: number = 1
+  movieId: number = 1
 
   headerBackground: string = ''
   headerTitle: string = ''
@@ -60,7 +60,7 @@ export class MoviesPageComponent implements OnInit {
   }
 
   showModal(id: number) {
-    this.id = id;
+    this.movieId = id;
     this.hidden = false
   }
 
