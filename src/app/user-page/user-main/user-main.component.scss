@@ -1,25 +1,28 @@
 .main-container {
     display: flex;
     flex-direction: column;
+    gap: 3rem;
     width: 100vw;
     height: 100vw;
-    background: black;
+    background: #141414;
 }
 
 .logo {
     display: flex;
-    width: 165px;
-    height: 93px;
+    width: 10rem;
     margin-left: 80px;
     margin-top: 30px;
     align-self: flex-start;
 }
 
-h3 {
+.logo img {
+    width: 100%;
+}
+
+h1 {
     color: #E4E4E4;
     font-size: 50px;
     font-weight: 400;
-    font-family: 'martel';
     align-self: center;
 }
 
@@ -35,24 +38,23 @@ h3 {
         flex-direction: column;
         width: 100vw;
         height: 100vh;
-        background: black;
     }
 
     .logo {
         display: flex;
-        width: 32px;
-        height: 32px;
+        height: 2rem;
+        width: 5rem;
         margin-left: 16px;
-        margin-top: 16px;
+        margin-top: 0.5rem;
         align-self: flex-start;
     }
 
+
     
-    h3 {
+    h1 {
         color: #E4E4E4;
-        font-size: 16px;
+        font-size: 2rem;
         font-weight: 400;
-        font-family: 'martel';
         align-self: center;
     }
 }
