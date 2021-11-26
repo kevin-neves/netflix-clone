@@ -3,6 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AppService, UserInterface } from 'src/app/app.service';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/auth.service';
+import { phoneEmail } from 'src/app/validators/phone-email-validator.directive';
 
 @Component({
   selector: 'app-login-main',
@@ -13,9 +14,10 @@ export class LoginMainComponent implements OnInit {
 
   loading: boolean = false
   knowMore: boolean = false
+  regex: string = "^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$"
 
   loginForm = this.fb.group({
-    login: ["",  Validators.compose([Validators.required, Validators.email])],
+    login: ["",  Validators.compose([Validators.required, phoneEmail()])],
     password: ["", [Validators.required, Validators.minLength(6), Validators.maxLength(70)]]
   }) 
  
