@@ -1,11 +1,14 @@
+* {
+    --filter-blue: rgba(18, 19, 32, 0.4);
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
     width: auto;
-    background-image: url("/assets/netflix_background.png");
+    background-image: linear-gradient(var(--filter-blue), var(--filter-blue)), url("/assets/netflix_background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: grayscale(0.4);
 }
 
 .logo {
@@ -20,6 +23,7 @@
 .logo img {
     width: 100%;
 }
+
 
 .login-modal {
     display: flex;
