@@ -5,16 +5,20 @@
     background-image: url("/assets/netflix_background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    backdrop-filter: grayscale(80%);
+    backdrop-filter: grayscale(0.4);
 }
 
 .logo {
     display: flex;
-    width: 165px;
+    width: 10rem;
     height: 93px;
     margin-left: 5rem;
     margin-top: 1rem;
     align-self: flex-start;
+}
+
+.logo img {
+    width: 100%;
 }
 
 .login-modal {
@@ -23,7 +27,7 @@
     width: 440px;
     height: 550px;
     padding: 4rem;
-    background: black;
+    background: rgba(0, 0, 0, 0.9);
     align-self: center;
     margin-bottom: 2rem;
 }
@@ -90,30 +94,24 @@
 @media screen and (max-width: 769px) {
 
     .main-container {
-        display: flex;
-        flex-direction: column;
-        background: black;
+        background: #141414;
         width: 100vw;
         backdrop-filter: grayscale(80%);
     }
 
     .logo {
-        display: flex;
         width: 100px;
         height: 50px;
-        margin-top: 8px;
-        margin-left: 8px;
-        align-self: flex-start;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
     }
 
     .login-modal {
-        display: flex;
-        flex-direction: column;
+        background: #141414;
+        padding: 4rem 1rem;
         width: auto;
         height: auto;
         margin-top: 0px;
-        background: black;
-        align-self: center;
     }
 }
 
