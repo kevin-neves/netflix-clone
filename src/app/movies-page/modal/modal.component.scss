@@ -21,14 +21,15 @@ button:hover {
     bottom: 0;
     right: 0;
     left: 0;
-    height: 300vh;
+    height: 100vh;
     background-color: rgba(0,0,0,0.8);
     z-index: 11;
+    position: fixed;
+    overflow: auto;
 }
 
 .modal {
     width: 60vw;
-    position: fixed;
     height: fit-content;
     background-color: #141414;
 }
